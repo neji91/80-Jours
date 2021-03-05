@@ -1,0 +1,146 @@
+/*CSS for Side Nav*/
+.nav {
+  /* Background */
+  --color-1: #222;
+  /* link */
+  --color-2: #fff;
+  /* link hover */
+  --color-3: red;
+  --height: 5vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: var(--height);
+  background-color: var(--color-1);
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+}
+
+.nav__logo {
+  flex: 1 1 200px;
+}
+
+.nav__bar {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-flow: wrap column;
+  padding-top: 4rem;
+  background-color: var(--color-1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.125);
+  transition: width 0.5s;
+}
+.nav__bar.open {
+  width: min(100%, 600px);
+  transition: width 0.5s;
+}
+.nav__bar .internal-links {
+  display: flex;
+  flex-direction: column;
+}
+.nav__bar .internal-links a {
+  padding: 1rem 2rem;
+}
+.nav__bar .social-media {
+  white-space: nowrap;
+  padding: 1rem;
+  
+}
+.nav__bar .social-media a {
+  padding: 1rem;
+}
+.nav__bar .light-button {
+  cursor: pointer;
+  padding: 1rem 2rem;
+}
+.nav__bar a,
+.nav__bar .light-button {
+  display: inline-block;
+  color: var(--color-2);
+  text-decoration: none;
+  transition: 300ms;
+}
+.nav__bar a:hover,
+.nav__bar .light-button:hover {
+  color: var(--color-3);
+  opacity: 0.8;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+}
+
+.nav__action-button {
+  display: block;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  z-index: 1;
+  margin-left: auto;
+  /* BUTTON */
+}
+.nav__action-button .action-button__bar {
+  width: 35px;
+  height: 5px;
+  background-color: var(--color-2);
+  margin: 6px 0;
+  border-radius: 2px;
+  /* Rotate first bar */
+  /* Fade out the second bar */
+  /* Rotate last bar */
+}
+.nav__action-button .action-button__bar.action-button--bar1, .nav__action-button .action-button__bar.action-button--bar3 {
+  transition: 0.5s;
+}
+.nav__action-button .action-button__bar.action-button--bar1.change {
+  transform: rotate(-45deg) translate(-9px, 7px);
+}
+.nav__action-button .action-button__bar.action-button--bar2.change {
+  transform: scaleX(0);
+}
+.nav__action-button .action-button__bar.action-button--bar3.change {
+  transform: rotate(45deg) translate(-8px, -7px);
+}
+
+.nav hr {
+  width: 100%;
+  border-color: var(--color-2);
+  border-style: solid;
+  opacity: 0.2;
+}
+
+@media screen and (min-width: 1200px) {
+  .nav__action-button {
+    display: none;
+  }
+
+  .nav__bar {
+    flex: 4 4 800px;
+    position: static;
+    box-shadow: none;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: initial;
+    z-index: 0;
+  }
+  .nav__bar.open {
+    width: auto;
+  }
+  .nav__bar .internal-links {
+    flex-direction: row;
+    flex: 2 2 400px;
+  }
+  .nav__bar .social-media {
+    flex: 1 1 200px;
+  }
+  .nav__bar .light-button {
+    margin-left: auto;
+  }
+  .nav hr {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=navbar.css.map */

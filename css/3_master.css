@@ -1,0 +1,277 @@
+        @import 'fonts.css';
+
+        /*NOTE flex: 1 1 valeut ne fonctonne sur <img> les images / voir div */
+        :root {
+            --primary: #222;
+            --light: #f5f5f5;
+            --typo1: 'Fira Sans', sans-serif;
+            --typo2: 'Roboto', sans-serif;
+        }
+
+        /*ANCHOR GLOBAL*/
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--typo2);
+            font-size: 1.125rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            width: 100%;
+            margin: 0;
+            color: var(--primary);
+            font-family: var(--typo1);
+        }
+
+        ul {
+            padding-left: 1rem;
+        }
+
+        /*ANCHOR MODIFIER*/
+        /*ANCHOR __COLOR*/
+        .bg-default {
+            background-color: var(--light);
+        }
+
+        .bg-primary {
+            background-color: var(--primary);
+        }
+
+        .txt-white {
+            color: white;
+        }
+
+        /*ANCHOR __TYPO*/
+        .txt-center {
+            text-align: center;
+        }
+
+        /*ANCHOR __FLEX*/
+        .d-flex {
+            display: flex;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+
+        .row {
+            flex-direction: row;
+        }
+
+        .row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .column {
+            flex-direction: row;
+        }
+
+        /*ANCHOR __ALIGNMENT*/
+        .jc-c {
+            justify-content: center;
+        }
+
+        .ai-c {
+            align-items: center;
+        }
+
+        /*ANCHOR __ESPACEMENT*/
+        .p-1 {
+            padding: 1rem;
+        }
+
+        .py-1 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .py-2 {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .py-3 {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .py-4 {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .py-5 {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        .pt-5 {
+            padding-top: 5rem;
+        }
+
+        .m-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .m-1 {
+            margin: 1rem;
+        }
+
+        .my-1 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .my-2 {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .my-4 {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .my-5 {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .mb-1 {
+            margin-bottom: 1rem;
+        }
+
+        .mt-5 {
+            margin-top: 5rem;
+        }
+
+        /*ANCHOR __DIMENSIONS*/
+        .w-default {
+            max-width: 1200px;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .w-1200 {
+            max-width: 1200px;
+        }
+
+        .w-400 {
+            max-width: 400px;
+        }
+        .w-600 {
+            max-width: 600px;
+        }
+
+        .w-800 {
+            max-width: 800px;
+        }
+
+        .f-300 {
+            flex: 1 1 300px;
+        }
+
+        /*ANCHOR __BUTTON*/
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            background-color: var(--primary);
+            color: var(--light);
+            text-transform: uppercase;
+            transition: border, background 500ms;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-light {
+            background-color: var(--light);
+            border: 2px solid transparent;
+            color: var(--primary);
+            transition: border, background 500ms;
+        }
+
+        .btn-light:hover {
+            background-color: transparent;
+            border: 2px solid var(--light);
+            color: var(--light);
+        }
+
+        /*ANCHOR __DESIGN*/
+        /*ANCHOR COMPONENTS*/
+        .section1 {
+            min-height: 50vh;
+            /* background-image: url(https://source.unsplash.com/1600x900/?nature,australia);
+            background-size: cover;
+            background-position: 50%; */
+        }
+
+        .cta__title,
+        .cta__content {
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.125);
+            /*x y floue couleur*/
+        }
+
+        .cta__title {
+            font-size: 2rem;
+        }
+
+        .cta__footer {
+            text-align: left;
+        }
+
+        .section2 .art {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.125);
+            border-radius: 4px;
+        }
+
+        .art__img {
+            border-radius: 4px 4px 0 0;
+        }
+
+        .art__link {
+            display: block;
+            color: inherit;
+            text-align: right;
+            margin: 1rem 0;
+        }
+
+        @media (min-width: 360px) {
+            .cta__title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .cta__title {
+                font-size: 5rem;
+            }
+        }
