@@ -1,2 +1,3 @@
 user-agent: *
 disallow:
+https://80-jours-phi.vercel.app/
